@@ -1,0 +1,11 @@
+1. Imports: Load external modules and internal function references.
+2. Define the main strategy runner: All trading logic lives here.
+3. Call the signal generator to decide whether to trade.
+4. Check for a valid BUY/SELL decision.
+5. Execute the trade using Alpaca's API.
+6. Send a Telegram alert to notify about the trade.
+7. Log the trade to Google Sheets for tracking/taxes.
+8. If no trade signal, output a quiet log.
+9. Catch and alert on any errors.
+10. Use the `schedule` library to run daily at 3:55 PM.
+11. Start the infinite loop that checks schedule jobs every 30 seconds.
