@@ -48,7 +48,7 @@ schedule.every().day.at("15:55").do(run_strategy)
 
 # 11. Main runtime loop
 if __name__ == "__main__":
-    print("Scheduler started.")
+    print("Scheduler now started.")
     while True:
         schedule.run_pending()
         time.sleep(30)
