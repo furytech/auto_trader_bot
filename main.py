@@ -19,7 +19,7 @@ def run_strategy():
             ticker = result["ticker"]
             action = result["signal"]
             reasons = result["reasons"]
-            qty = result.get("quantity", 1)
+            qty = result.get("qty", result.get("quantity", 1))
 
             # 5. Execute trade and get execution price
             price = execute_trade(ticker, action, qty, reasons)
